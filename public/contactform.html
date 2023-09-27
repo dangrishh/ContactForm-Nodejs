@@ -1,0 +1,84 @@
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Contact Form</title>
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   <link href="http://fonts.cdnfonts.com/css/whitney-2" rel="stylesheet">
+</head>
+    <body style="box-sizing: border-box; font-family: 'Whitney'; background: #000000;">
+        <div class="page" "></div>
+            <div style="width: 60%;margin-left: 20%; margin-top: 5%; margin-right: 20%; border-radius:10px; background: #f9f9f9c0; ">
+            <div class="header" style=" text-align: center; padding-top: 5%; color:#0D122B">
+                <h1>Basic Contact Form</h1>
+                <p style="width: 50%; margin: auto;"> Have questions or comments? We'd love to hear from you! Fill out the form and we'll be in touch as soon as possible.</p>
+            </div>
+            <div class="card-container"style="display:table; width:100%; height: 800 px; ">
+                <div style="display: table-cell; text-align:center; width:50%; vertical-align: middle;" class="logo-div">
+                    <img style="width:50%; margin-bottom:10%; vertical-align: middle;" src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Twilio-logo-red.svg" alt="Twilio logo">
+                </div>
+                <div style="display: table-cell;" class="form-container">
+                    <form action="/thankyou" href="" method="GET" class="contact-form" style="margin: 10%; margin-left:5%; width: 350px;">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Details</label>
+                            <input type="type" class="form-control" id="username" name="username" placeholder="Name">
+                            <small class="form-text text-muted">We'll never share your email with anyone else.</small>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Select Subjects</label>
+
+                            <select id="subjects" name="subjects">
+                                <option value="networking">Networking 2</option>
+                                <option value="webDesign">Principle of Web Design</option>
+                                <option value="integProgram">Integrative Programming</option>
+                                <option value="clientServer">Client Server</option>
+                            </select>
+
+<!--                             <input type="text" class="form-control" id="subject" name="subject" aria-describedby="emailHelp"
+                                placeholder="Subject"> -->
+                        </div>
+<!--                     <article name="gender" id="selectedGender">
+                        <label for="male">Male</label>
+                        <input type="radio" id="male" name="gender" value="Male">
+                        <label for="male">Female</label>
+                        <input type="radio" id="female" name="gender" value="female">
+                    </article> -->
+
+                    <article id="genderForm">
+                        <label><input type="radio" name="gender" value="male"> Male</label>
+                        <label><input type="radio" name="gender" value="female"> Female</label>
+                        <label><input type="radio" name="gender" value="other"> Other</label>
+                    </article>
+
+                    <div id="selectedInterests">
+                        <h3>Select your interest/hobby</h3>
+                        <label for="interest1">Coding</label>
+                        <input type="checkbox" value="coding">
+            
+                        <label for="interest1">Basketball</label>
+                        <input type="checkbox" value="Basketball">
+            
+                        <label for="interest1">Chess</label>
+                        <input type="checkbox" value="Chess">
+            
+                        <label for="interest1">Online Games</label>
+                        <input type="checkbox" value="Games">
+                    </div>
+
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Message</label>
+                            <textarea class="form-control" id="message" name="message" placeholder="Message"></textarea>
+                        </div>
+                        <button type="submit" style="background:#0263e0 !important;" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <script src="/js/app.js"></script>
+
+    </body>
+</html>
