@@ -36,6 +36,7 @@ contactForm.addEventListener('submit', (e) => {
         console.log(data);
         if (data === 'Success') {
             // The server responded with 'Success'
+            alert('Successfully Submit!')
             window.location.href = '/thankyou.html'; // Redirect to thankyou.html
         }
     })
