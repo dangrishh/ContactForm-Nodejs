@@ -1,4 +1,5 @@
 const express = require('express');
+const path = require('path');
 const app = express();
 
 const PORT = process.env.PORT || 5000;
@@ -7,16 +8,15 @@ const PORT = process.env.PORT || 5000;
 app.use(express.static('public'));
 app.use(express.json())
 
-app.get('/nn', (req, res) => { 
+app.get('/', (req, res) => { 
     res.sendFile(__dirname + '/public/contactform.html');
 })
 
-app.get('/thankyou', (req, res) => { 
-    res.render("thankyou");
-})
-
-app.post('/', (req, res) => {
+app.post('/thankyou', (req, res) => {
     console.log(req.body);
+    // Simulate a successful submission
+    const response = 'Success';
+    res.send(response);
 });
 
 app.listen(PORT, () => {
