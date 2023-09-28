@@ -24,7 +24,7 @@ contactForm.addEventListener('submit', (e) => {
         }
     });
 
-    fetch('/', {
+    fetch('/thankyou', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -35,15 +35,9 @@ contactForm.addEventListener('submit', (e) => {
     .then(data => {
         console.log(data);
         if (data === 'Success') {
+            // The server responded with 'Success'
             window.location.href = '/thankyou.html'; // Redirect to thankyou.html
-        } else {
-            alert('Something went wrong!');
         }
     })
-    .catch(error => {
-        console.error('Error:', error);
-        alert('Something went wrong!');
-    });
-
     console.log("Skills: " + formData.skills);
 });
